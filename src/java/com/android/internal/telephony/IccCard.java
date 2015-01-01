@@ -231,4 +231,18 @@ public interface IccCard {
      * @return true if ICC card is PUK2 blocked
      */
     public boolean getIccPuk2Blocked();
-}
+
+    public void exchangeAPDU(int cla, int command, int channel, int p1, int p2,
+            int p3, String data, Message onComplete);
+
+    public void openLogicalChannel(String AID, Message onComplete);
+
+    public void closeLogicalChannel(int channel, Message onComplete);
+
+    public void exchangeSimIO(int fileID, int command,
+                              int p1, int p2, int p3, String pathID, Message onComplete);
+
+    public void getAtr(Message onComplete);
+
+    public void getSelectResponse(Message onComplete);
+ }

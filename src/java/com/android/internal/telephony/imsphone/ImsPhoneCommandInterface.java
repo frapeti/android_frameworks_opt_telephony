@@ -587,4 +587,23 @@ class ImsPhoneCommandInterface extends BaseCommands implements CommandsInterface
     }
 
     public boolean needsOldRilFeature(String feature) { return false; }
+
+    /**
+     * SmartCard API related exports
+     */
+    public void iccExchangeAPDU(int cla, int command, int channel, int p1,
+            int p2, int p3, String data, Message response) {
+    }
+
+    public void iccOpenChannel(String AID, Message response) {
+    }
+
+    public void iccCloseChannel(int channel, Message response) {
+    }
+
+    public void iccGetAtr(Message response) {
+    }
+
+    public void iccGetSelectResponse(Message response) {
+    }
 }

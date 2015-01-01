@@ -1777,4 +1777,25 @@ public final class SimulatedCommands extends BaseCommands
     }
 
     public boolean needsOldRilFeature(String feature) { return false; }
+
+    public void iccExchangeAPDU (int cla, int command, int channel, int p1,
+                         int p2, int p3, String data, Message response) {
+        unimplemented(response);
+    }
+
+    public void iccOpenChannel(String AID, Message response) {
+        unimplemented(response);
+    }
+
+    public void iccCloseChannel(int channel, Message response) {
+        unimplemented(response);
+    }
+
+    public void iccGetAtr(Message response) {
+        unimplemented(response);
+    }
+
+    public void iccGetSelectResponse(Message response) {
+        unimplemented(response);
+    }
 }
